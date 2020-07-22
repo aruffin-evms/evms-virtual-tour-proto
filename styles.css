@@ -316,6 +316,7 @@ body {
 .embed-responsive-16by9 {
   padding-bottom: 56.25%;
 }
+
 .article-title {
     color: rgb(0,51,78);
     font-family: "Century Schoolbook BT", serif;
@@ -330,4 +331,7 @@ body {
     border-radius: 5px;
     box-shadow: none;
     height: min-content;
+}
+.filter {
+  display: none;
 }
