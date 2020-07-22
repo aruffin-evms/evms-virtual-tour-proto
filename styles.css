@@ -288,10 +288,6 @@ body {
   background-color: green;
   margin: 18px 15px;
 }
-@media (min-width: 900px) {
-  .main-content__more-videos__video {
-  }
-}
 
 .tour-thumbnail {
   width: 100%;
@@ -302,8 +298,6 @@ body {
   background-color: orange;
   margin: 100px 0 0;
 }
-/*Styles for modals*/
-
 
 .embed-responsive {
 	position: relative;
@@ -320,7 +314,7 @@ body {
 .article-title {
     color: rgb(0,51,78);
     font-family: "Century Schoolbook BT", serif;
-    font-size: 1.125em;
+    font-size: 1.25em !important;
     font-weight: 600;
     line-height: 1.2em;
     padding-bottom: 10px;
@@ -333,5 +327,5 @@ body {
     height: min-content;
 }
 .filter {
-  display: none;
+  display: none !important;
 }
