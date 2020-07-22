@@ -36,11 +36,6 @@ body {
   overflow-x: hidden;
 }
 
-.main-content__hero {
-  height: auto;
-  width: 100vw;
-}
-
 .main-content__section__hero__image {
   width: 100vw;
   min-height: 200px;
@@ -53,6 +48,13 @@ body {
   margin: 0 auto;
   padding-top: 30px;
   width: 90%;
+}
+
+.main-content__hero {
+    height: auto;
+    width: 100vw;
+    margin-top: -150px;
+    position: relative;
 }
 
 @media (min-width: 900px) {
@@ -329,3 +331,6 @@ body {
 .filter {
   display: none !important;
 }
+.mix p {
+    display: none;
+  }
