@@ -3,7 +3,16 @@ window.addEventListener('load', onVrViewLoad);
 function onVrViewLoad() {
   // Selector '#vrview' finds element with id 'vrview'.
   var vrView = new VRView.Player('#vrview', {
-    image: 'https://www.evms.edu/media/training/student-parking-garage.jpg',
-    is_stereo: true
+    image: './cast-lab.jpg',
+    is_vr_off: true,
+    width: 1000,
+    height: 900,
+    default_yaw: 360,
+    is_yaw_only: true
   });
 }
+
+
+renderer.setSize( window.innerWidth/2, window.innerHeight/2 )
+
+
