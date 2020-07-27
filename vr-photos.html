@@ -2,24 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=`, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <title>Click and drag VR</title>
   <style>
-    #vrview {
-      height: 800px !important;
-      width: 100% !important;
-    }
-
-    iframe {
-      height: 100% !important;
-      width: 100% !important;
-    }
   </style>
 </head>
 <body>
-  <main id="vrview" class="vr-photos">
-  </main>
-  <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
-  <script src="vr-photos.js"></script>
+  <a-scene>
+    <a-sky src="./cast-lab.jpg"></a-sky>
+  </a-scene>
 </body>
 </html>
