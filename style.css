@@ -37,6 +37,13 @@ body {
 }
 
 /* pulse overrides */
+.col-sm-pull-3 {
+  right: 0 !important;
+} 
+
+.col-sm-9 {
+  width: 100% !important;
+}
 .mix {
   border: 1px solid lightgray;
   border-radius: 5px;
