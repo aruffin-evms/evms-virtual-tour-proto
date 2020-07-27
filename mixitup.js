@@ -21,7 +21,8 @@ var qryString = window.location.href;
 var qryStringIndex = qryString.indexOf('filter=');
 if (qryStringIndex > 0) {
 	qryString = qryString.slice(qryStringIndex + 1, qryString.length);
-	qryString = qryString.indexOf('&') > 0 ? qryString.slice(6, qryString.indexOf('&')) : qryString.slice(6, qryString.length);
+  qryString = qryString.indexOf('&') > 0 ? qryString.slice(6, qryString.indexOf('&')) : qryString.slice(6, qryString.length);
+  console.log('if querystring: ' + qryString)
 	var aryQryString = qryString.split(",");
 	var value = "", selector = "";
 	for (var i = 0; i < aryQryString.length; i++) {
@@ -29,5 +30,6 @@ if (qryStringIndex > 0) {
 		$(selector).attr('checked', 'checked');
 	}
 } else {
-	qryString = 'all';
+  qryString = 'all';
+  console.log('else querystring: ' + qryString)
 }
