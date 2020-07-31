@@ -67,13 +67,13 @@ body {
 .virtual-tours__hero {
   height: auto;
   width: 100vw;
+  background-color: gray;
 }
 
 .virtual-tours__section__hero__image {
   width: 100vw;
   min-height: 600px;
   object-fit: cover;
-  background-color: gray;
 }
 
 .virtual-tours__copy {
@@ -221,6 +221,7 @@ body {
   width: 100vw;
   max-height: 300px;
   margin-top: 100px;
+  background-color: gray;
 }
 
 @media (min-width: 900px) {
@@ -233,7 +234,7 @@ body {
   width: 100%;
   min-height: 250px;
   object-fit: cover;
-  background-color: gray;
+  
 }
 
 .virtual-tours__content {
