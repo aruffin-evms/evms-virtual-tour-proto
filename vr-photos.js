@@ -18,12 +18,19 @@ const sharedCampusCard = document.getElementById('sharedCampusCard')
 const studentParkingCard = document.getElementById('studentParkingCard')
 const townBankCard = document.getElementById('townBankCard')
 
+const anatomyLabThumbnail = document.getElementById('anatomyLabThumbnail')
+const brickellThumbnail = document.getElementById('brickellThumbnail')
+const communityThumbnail = document.getElementById('communityThumbnail')
+const multiDiscThumbnail = document.getElementById('multiDiscThumbnail')
+const sharedCampusThumbnail = document.getElementById('sharedCampusThumbnail')
+const studentParkingThumbnail = document.getElementById('studentParkingThumbnail')
+const townBankThumbnail = document.getElementById('townBankThumbnail')
+
+
 const virtualTourModal = document.getElementById('virtualTourModal')
 const closeModal = document.getElementById('closeModal')
 
-closeModal.addEventListener('click', function() {
-  virtualTourModal.style.display = 'none'
-})
+
 
 // vr html docs
 const vrViews = {
@@ -87,7 +94,7 @@ function attachLink(url, element) {
 
 
 
-// console.log('hi')
+// get the id of the element when clicked
 function findID() {
   // console.log('function called')
  document.querySelectorAll('.virtual-tours__video').forEach(function(element) {
@@ -101,47 +108,59 @@ function findID() {
 
 findID()
 
+// show modal
 function showModal(source) {
   virtualTourModal.style.display = 'block'
   modalVideo.src = source
   modalVideo.play()
 }
 
+// add video source to modal video
 function injectVideoSource(id) {
   console.log(id)
   switch (id) {
     case 'anatomyLabCard':
+    case 'anatomyLabThumbnail':
       showModal(videoAssets.anatomyLab)
       break;
 
-    case 'brickellLibraryCard': 
+    case 'brickellLibraryCard':
+    case 'brickellThumbnail': 
       showModal(videoAssets.brickellLibrary)
       break;
     
     case 'communityCenterCard':
+    case 'communityThumbnail':
       showModal(videoAssets.communityCenter)
       break;
 
     case 'multidiscLabCard':
+    case'multiDiscThumbnail':
       showModal(videoAssets.multiDiscLabs)
       break;
 
     case 'sharedCampusCard':
+    case'sharedCampusThumbnail':
       showModal(videoAssets.sharedCampus)
       break;
 
     case 'studentParkingCard':
+    case'studentParkingThumbnail':
       showModal(videoAssets.studentParking)
       break;
 
     case 'townBankCard':
+    case'townBankThumbnail':
       showModal(videoAssets.towneBankLawn)
       break;
   }
 }
 
 
-
+closeModal.addEventListener('click', function() {
+  virtualTourModal.style.display = 'none'
+  // virtualTourModal.style.animation = 'fadeOut .5s'
+})
 
 
 // function injectVideo() {
