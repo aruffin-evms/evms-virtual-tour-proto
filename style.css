@@ -298,6 +298,17 @@ body {
   box-shadow: 0 6px 12px rgba(0,0,0,0.16), 0 6px 12px rgba(0,0,0,0.23);
 }
 
+.virtual-tour__label {
+  display: inline-block;
+}
+
+.virtual-tour__icon {
+  color: white;
+  position: relative;
+  top: 80%;
+  left: 4%;
+}
+
 .virtual-tour__content__card__thumbnail {
   height: 200px;
   width: 100%;
