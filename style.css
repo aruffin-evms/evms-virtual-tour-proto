@@ -286,37 +286,38 @@ body {
   width: 300px;
   margin: 15px;
   border-radius: 5px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
   cursor: pointer;
   transition: .3s all;
+}
+
+.virtual-tours__content__card:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.16), 0 6px 12px rgba(0,0,0,0.23);
 }
 
 .virtual-tours__link {
   text-decoration: none;
 }
-.virtual-tours__content__card:hover {
-  box-shadow: 0 6px 12px rgba(0,0,0,0.16), 0 6px 12px rgba(0,0,0,0.23);
-}
 
-.virtual-tour__label {
+.virtual-tours__label {
   display: inline-block;
 }
 
-.virtual-tour__icon {
+.virtual-tours__icon {
   color: white;
   position: relative;
   top: 80%;
   left: 4%;
 }
 
-.virtual-tour__content__card__thumbnail {
+.virtual-tours__content__card__thumbnail {
   height: 200px;
   width: 100%;
   border-radius: 5px 5px 0 0 ;
   background-color: gray;
 }
 
-.virtual-tour__content__card__title {
+.virtual-tours__content__card__title {
   font-size: 24px;
   color: #943001;
   padding-left: 10px;
