@@ -285,7 +285,7 @@ body {
 .virtual-tours__content__card {
   height: 300px;
   width: 300px;
-  margin: 30px 0;
+  margin: 30px 10px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
   cursor: pointer;
