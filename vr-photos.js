@@ -26,11 +26,10 @@ const sharedCampusThumbnail = document.getElementById('sharedCampusThumbnail')
 const studentParkingThumbnail = document.getElementById('studentParkingThumbnail')
 const townBankThumbnail = document.getElementById('townBankThumbnail')
 
-
 const virtualTourModal = document.getElementById('virtualTourModal')
 const closeModal = document.getElementById('closeModal')
 
-
+const html = document.querySelector('html')
 
 // vr html docs
 const vrViews = {
@@ -110,6 +109,7 @@ findID()
 // show modal
 function showModal(source) {
   virtualTourModal.style.display = 'block'
+  disableScroll()
   modalVideo.src = source
   modalVideo.play()
 }
@@ -154,7 +154,15 @@ function injectVideoSource(id) {
   }
 }
 
-
 closeModal.addEventListener('click', function() {
   virtualTourModal.style.display = 'none'
+  enableScroll()
 })
+
+function disableScroll() {
+  html.style.overflow = 'hidden';
+}
+
+function enableScroll() {
+  html.style.overflow = null;
+}
