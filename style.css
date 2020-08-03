@@ -464,7 +464,7 @@ body {
 .virtual-tours__modal__content {
   height: 80%;
   width: 80%;
-  margin: 0 auto;
+  margin: 5% auto;
 }
 
 .virtual-tours__modal__video {
