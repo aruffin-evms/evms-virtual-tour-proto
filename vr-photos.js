@@ -96,7 +96,6 @@ function attachLink(url, element) {
 
 // get the id of the element when clicked
 function findID() {
-  // console.log('function called')
  document.querySelectorAll('.virtual-tours__video').forEach(function(element) {
   element.onclick = function(event) {
     let id = event.target.id;
@@ -117,7 +116,6 @@ function showModal(source) {
 
 // add video source to modal video
 function injectVideoSource(id) {
-  console.log(id)
   switch (id) {
     case 'anatomyLabCard':
     case 'anatomyLabThumbnail':
@@ -159,34 +157,4 @@ function injectVideoSource(id) {
 
 closeModal.addEventListener('click', function() {
   virtualTourModal.style.display = 'none'
-  // virtualTourModal.style.animation = 'fadeOut .5s'
 })
-
-
-// function injectVideo() {
-//   switch (key) {
-//     case value:
-      
-//       break;
-  
-//     default:
-//       break;
-//   }
-// }
-
-
-// ! delete
-// vr images
-// const vrAssets = {
-//   anatomyLab: './assets/images/anatomy-lab.jpg',
-//   castClassroom: './assets/images/cast-classroom.jpg',
-//   castLab: './assets/images/cast-lab.jpg',
-//   lesterRoom: './assets/images/lester-104.jpg',
-//   lesterLobby: './assets/images/lester-hall-norfolk-southern-foundation-lobby.jpg',
-//   mdl: './assets/images/mdl.jpg',
-//   paAdmin: './assets/images/pa-admin-offices.jpg',
-//   studentCenter: './assets/images/student-center-and-bookstore.jpg',
-//   studentParking: './assets/images/student-parking.jpg',
-//   studentParkingGarage: './assets/images/student-parking-garage.jpg'
-// }
-
