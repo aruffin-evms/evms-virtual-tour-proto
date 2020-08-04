@@ -67,7 +67,6 @@ body {
 .virtual-tours__hero {
   height: auto;
   width: 100vw;
-  background-color: gray;
 }
 
 .virtual-tours__section__hero__image {
@@ -98,7 +97,7 @@ body {
 
 @media(min-width: 600px) {
   .virtual-tours__title {
-    width: 80%;
+    width: 100%;
     font-size: 60px;
   }
 }
