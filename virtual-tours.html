@@ -33,20 +33,13 @@
     </div>
     <section class="virtual-tours__conent">
       <h3 class="virtual-tours__content__title"><span>Virtual Tours</span></h3>
-      <!-- <div class="virtual-tours__conent__filters">
-        <ul class="virtual-tours__conent__filter-list">
-          <li class="virtual-tours__conent__filter-list__item"><input type="checkbox" name="cast-lab" id=""><label
-              for="cast-lab">Cast Lab</label></li>
-          <li class="virtual-tours__conent__filter-list__item"><input type="checkbox" name="student-parking-lot"
-              id=""><label for="student-parking-lot">Student Parking Lot</label></li>
-          <li class="virtual-tours__conent__filter-list__item"><input type="checkbox" name="anatomy-lab" id=""><label
-              for="anatomy-lab">Anatomy Lab</label></li>
-        </ul>
-      </div> -->
       <div class="virtual-tours__content__wrapper">
+        <div class="virtual-tours__show-all">
+          <a id="showAllTours" href="javascript:void(0);" class="virtual-tours__show-all__cta">Show All Tours</a>
+        </div>
         <div class="virtual-tours__content__cards">
           <!-- vr: anatomy lab -->
-          <a id="anatomyLabVr" class="virtual-tours__link" target="_blank">
+          <a id="anatomyLabVr" class="virtual-tours__link lab" target="_blank">
             <div class="virtual-tours__content__card">
               <figure class="virtual-tours__content__card__thumbnail">
                 <span class="virtual-tours__icon material-icons">360</span>
@@ -60,7 +53,7 @@
             </div>
           </a>
           <!-- vr: cast classroom -->
-          <a id="castClassroomVr" class="virtual-tours__link" target="_blank">
+          <a id="castClassroomVr" class="virtual-tours__link general classroom" target="_blank">
             <div class="virtual-tours__content__card">
               <figure class="virtual-tours__content__card__thumbnail">
                 <span class="virtual-tours__icon material-icons">360</span>
@@ -70,7 +63,7 @@
             </div>
           </a>
           <!-- vr: cast lab -->
-          <a id="castLabVr" class="virtual-tours__link" target="_blank">
+          <a id="castLabVr" class="virtual-tours__link lab" target="_blank">
             <div class="virtual-tours__content__card">
               <figure class="virtual-tours__content__card__thumbnail">
                 <span class="virtual-tours__icon material-icons">360</span>
@@ -80,7 +73,7 @@
             </div>
           </a>
           <!-- vr: lester 104 -->
-          <a id="lesterRoomVr" class="virtual-tours__link cool" target="_blank">
+          <a id="lesterRoomVr" class="virtual-tours__link classroom" target="_blank">
             <div class="virtual-tours__content__card">
               <figure class="virtual-tours__content__card__thumbnail">
                 <span class="virtual-tours__icon material-icons">360</span>
@@ -90,7 +83,7 @@
             </div>
           </a>
           <!-- vr: lester hall ns lobby -->
-          <a id="lesterHallLobbyVr" class="virtual-tours__link cool" target="_blank">
+          <a id="lesterHallLobbyVr" class="virtual-tours__link general" target="_blank">
             <div class="virtual-tours__content__card">
               <figure class="virtual-tours__content__card__thumbnail">
                 <span class="virtual-tours__icon material-icons">360</span>
@@ -100,7 +93,7 @@
             </div>
           </a>
           <!-- vr: mdl  -->
-          <a id="mdlVr" class="virtual-tours__link" target="_blank">
+          <a id="mdlVr" class="virtual-tours__link classroom" target="_blank">
             <div class="virtual-tours__content__card">
               <figure class="virtual-tours__content__card__thumbnail">
                 <span class="virtual-tours__icon material-icons">360</span>
@@ -110,7 +103,7 @@
             </div>
           </a>
           <!-- vr: pa admin offices -->
-          <a id="paAdminOffices" class="virtual-tours__link" target="_blank">
+          <a id="paAdminOffices" class="virtual-tours__link phys-assistant general" target="_blank">
             <div class="virtual-tours__content__card">
               <figure class="virtual-tours__content__card__thumbnail">
                 <span class="virtual-tours__icon material-icons">360</span>
@@ -120,7 +113,7 @@
             </div>
           </a>
           <!-- vr: student center bookstore -->
-          <a id="studentCenterBookStore" class="virtual-tours__link" target="_blank">
+          <a id="studentCenterBookStore" class="virtual-tours__link student general" target="_blank">
             <div class="virtual-tours__content__card">
               <figure class="virtual-tours__content__card__thumbnail">
                 <span class="virtual-tours__icon material-icons">360</span>
@@ -130,7 +123,7 @@
             </div>
           </a>
           <!-- vr: student parking -->
-          <a id="studentParking" class="virtual-tours__link" target="_blank">
+          <a id="studentParking" class="virtual-tours__link student general" target="_blank">
             <div class="virtual-tours__content__card">
               <figure class="virtual-tours__content__card__thumbnail">
                 <span class="virtual-tours__icon material-icons">360</span>
@@ -140,7 +133,7 @@
             </div>
           </a>
           <!-- vr: student parking garage -->
-          <a id="studentParkingGarage" class="virtual-tours__link" target="_blank">
+          <a id="studentParkingGarage" class="virtual-tours__link student general" target="_blank">
             <div class="virtual-tours__content__card">
               <figure class="virtual-tours__content__card__thumbnail">
                 <span class="virtual-tours__icon material-icons">360</span>
@@ -150,7 +143,7 @@
             </div>
           </a>
           <!-- video: anatomy lab -->
-          <div id="anatomyLabCard" class="virtual-tours__content__card virtual-tours__video">
+          <div id="anatomyLabCard" class="virtual-tours__content__card virtual-tours__video lab">
             <figure id="anatomyLabThumbnail" class="virtual-tours__content__card__thumbnail">
               <span class="virtual-tours__icon material-icons">play_circle_outline</span>
               <img src="" alt="" class="virtual-tours__content__card__thumbnail__image">
@@ -158,7 +151,7 @@
             <p class="virtual-tours__content__card__title">Anatomy lab video</p>
           </div>
           <!-- video: brickell medical science library -->
-          <div id="brickellLibraryCard" class="virtual-tours__content__card virtual-tours__video">
+          <div id="brickellLibraryCard" class="virtual-tours__content__card virtual-tours__video student library">
             <figure id="brickellThumbnail" class="virtual-tours__content__card__thumbnail">
               <span class="virtual-tours__icon material-icons">play_circle_outline</span>
               <img src="" alt="" class="virtual-tours__content__card__thumbnail__image">
@@ -166,7 +159,7 @@
             <p class="virtual-tours__content__card__title">Brickell video</p>
           </div>
           <!-- video: hr community student center -->
-          <div id="communityCenterCard" class="virtual-tours__content__card virtual-tours__video cool">
+          <div id="communityCenterCard" class="virtual-tours__content__card virtual-tours__video student general">
             <figure id="communityThumbnail" class="virtual-tours__content__card__thumbnail">
               <span class="virtual-tours__icon material-icons">play_circle_outline</span>
               <img src="" alt="" class="virtual-tours__content__card__thumbnail__image">
@@ -174,7 +167,7 @@
             <p class="virtual-tours__content__card__title">Community center video</p>
           </div>
           <!-- video: multidisciplinary lab -->
-          <div id="multidiscLabCard" class="virtual-tours__content__card virtual-tours__video">
+          <div id="multidiscLabCard" class="virtual-tours__content__card virtual-tours__video lab">
             <figure id="multiDiscThumbnail" class="virtual-tours__content__card__thumbnail">
               <span class="virtual-tours__icon material-icons">play_circle_outline</span>
               <img src="" alt="" class="virtual-tours__content__card__thumbnail__image">
@@ -182,7 +175,7 @@
             <p class="virtual-tours__content__card__title">Multidisciplinary Lab video</p>
           </div>
           <!-- video: shared campus -->
-          <div id="sharedCampusCard" class="virtual-tours__content__card virtual-tours__video">
+          <div id="sharedCampusCard" class="virtual-tours__content__card virtual-tours__video student general">
             <figure id="sharedCampusThumbnail" class="virtual-tours__content__card__thumbnail">
               <span class="virtual-tours__icon material-icons">play_circle_outline</span>
               <img src="" alt="" class="virtual-tours__content__card__thumbnail__image">
@@ -190,7 +183,7 @@
             <p class="virtual-tours__content__card__title">Shared Campus video</p>
           </div>
           <!-- video: student parking -->
-          <div id="studentParkingCard" class="virtual-tours__content__card virtual-tours__video">
+          <div id="studentParkingCard" class="virtual-tours__content__card virtual-tours__video student general">
             <figure id="studentParkingThumbnail" class="virtual-tours__content__card__thumbnail">
               <span class="virtual-tours__icon material-icons">play_circle_outline</span>
               <img src="" alt="" class="virtual-tours__content__card__thumbnail__image">
@@ -198,7 +191,7 @@
             <p class="virtual-tours__content__card__title">Student parking video</p>
           </div>
           <!-- video: towne bank lawn and green spaces -->
-          <div id="townBankCard" class="virtual-tours__content__card virtual-tours__video">
+          <div id="townBankCard" class="virtual-tours__content__card virtual-tours__video general">
             <figure id="townBankThumbnail" class="virtual-tours__content__card__thumbnail">
               <span class="virtual-tours__icon material-icons">play_circle_outline</span>
               <img src="" alt="" class="virtual-tours__content__card__thumbnail__image">
