@@ -156,28 +156,6 @@ body {
   }
 }
 
-.virtual-tours__cta {
-  background-color: black;
-  height: 50px;
-  width: 20%;
-  min-width: 200px;
-  text-decoration: none;
-  font-weight: 800;
-  color: white;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  margin-top: 20px;
-  border-radius: 5px;
-  transition: .5s all;
-}
-
-.virtual-tours__cta:hover {
-  
-}
-
 @media (min-width: 900px) {
   .virtual-tours__cta {
     margin-top: 0;
