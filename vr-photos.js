@@ -166,3 +166,29 @@ function disableScroll() {
 function enableScroll() {
   html.style.overflow = null;
 }
+
+function handleHashChange() { 
+  let cool = document.querySelectorAll('.cool')
+  let elements = document.querySelectorAll('.virtual-tours__link')
+  let cards = document.querySelectorAll('.virtual-tours__video')
+
+  if (location.hash === '#cool') { 
+    cool.forEach(element => {
+      element.style.border = 'solid 3px red'
+    });
+  } 
+  
+  elements.forEach(element => {
+    if(element.matches(':not(.cool)')) {
+      element.style.display = 'none'
+    }
+  })
+
+  cards.forEach(card => {
+    if(card.matches(':not(.cool)')) {
+      card.style.display ='none'
+    }
+  })
+} 
+
+window.onhashchange = handleHashChange;
