@@ -31,6 +31,12 @@ const closeModal = document.getElementById('closeModal')
 
 const html = document.querySelector('html')
 
+const links = document.querySelectorAll('.virtual-tours__link')
+const cards = document.querySelectorAll('.virtual-tours__video')
+
+const showAllTours = document.getElementById('showAllTours')
+const removeHash = history.replaceState({}, document.title, window.location.href.split('#')[0]);
+
 // vr html docs
 const vrViews = {
   anatomyLabView: './vr-views/anatomy-lab.html',
@@ -50,10 +56,19 @@ const videoAssets = {
   anatomyLab: './assets/videos/anatomy-lab-virtual-tour-clips.mp4',
   brickellLibrary: './assets/videos/brickell-medical-science-library-virtual-tour-clips.mp4',
   communityCenter: './assets/videos/hampton-roads-community-foundation-student-center-virtual-tour-clips.mp4',
-  multiDiscLabs: './assets/videos/multidisciplinary-labs-virtual-tour-clips.mp4',
+  multiDisclab: './assets/videos/multidisciplinary-lab-virtual-tour-clips.mp4',
   sharedCampus: './assets/videos/shared-campus-virtual-tour-clips.mp4',
   studentParking: './assets/videos/student-parking-virtual-tour-clips.mp4',
   towneBankLawn: './assets/videos/towne-bank-lawn-and-green-spaces-virtual-tour-clips.mp4'
+}
+
+const hashFilters = {
+  student: '#student',
+  physicianAssistant: '#phys-assistant',
+  general: '#general',
+  lab: '#lab',
+  library: '#library',
+  classroom: '#classroom'
 }
 
 // anatomy lab vr
@@ -134,7 +149,7 @@ function injectVideoSource(id) {
 
     case 'multidiscLabCard':
     case'multiDiscThumbnail':
-      showModal(videoAssets.multiDiscLabs)
+      showModal(videoAssets.multiDisclab)
       break;
 
     case 'sharedCampusCard':
@@ -168,27 +183,141 @@ function enableScroll() {
 }
 
 function handleHashChange() { 
-  let cool = document.querySelectorAll('.cool')
-  let elements = document.querySelectorAll('.virtual-tours__link')
-  let cards = document.querySelectorAll('.virtual-tours__video')
 
-  if (location.hash === '#cool') { 
-    cool.forEach(element => {
-      element.style.border = 'solid 3px red'
-    });
-  } 
+  showAllTours.style.display = 'flex';
+
+  const  url = location.hash;
+
+  switch (url) {
+    
+    case hashFilters.student:
+       links.forEach(link => {
+        if(link.matches(':not(.student)')) {
+          link.style.display = 'none'
+        }
+      })
+
+      cards.forEach(card => {
+        if(card.matches(':not(.student)')) {
+          card.style.display ='none'
+        }
+      })
+
+      break;
+
+    case hashFilters.physicianAssistant:
+
+      links.forEach(link => {
+        if(link.matches(':not(.phys-assistant)')) {
+          link.style.display = 'none'
+        }
+      })
+
+      cards.forEach(card => {
+        if(card.matches(':not(.phys-assistant)')) {
+          card.style.display ='none'
+        }
+      })
+
+      break;
+
+    case hashFilters.general:
+
+      links.forEach(link => {
+        if(link.matches(':not(.general)')) {
+          link.style.display = 'none'
+        }
+      })
+
+      cards.forEach(card => {
+        if(card.matches(':not(.general)')) {
+          card.style.display ='none'
+        }
+      })
+
+      break;
+
+    case hashFilters.lab:
+      
+      links.forEach(link => {
+        if(link.matches(':not(.lab)')) {
+          link.style.display = 'none'
+        }
+      })
+
+      cards.forEach(card => {
+        if(card.matches(':not(.lab)')) {
+          card.style.display ='none'
+        }
+      })
+
+      break;
+
+    case hashFilters.library:
+
+      links.forEach(link => {
+        if(link.matches(':not(.library)')) {
+          link.style.display = 'none'
+        }
+      })
+
+      cards.forEach(card => {
+        if(card.matches(':not(.library)')) {
+          card.style.display ='none'
+        }
+      })
+
+      break;
+      
+    case hashFilters.classroom:
+      
+      links.forEach(link => {
+        if(link.matches(':not(.classroom)')) {
+          link.style.display = 'none'
+        }
+      })
+
+      cards.forEach(card => {
+        if(card.matches(':not(.classroom)')) {
+          card.style.display ='none'
+        }
+      })
+
+      break;
+  }
+
+  // if (location.hash === '#cool') { 
+  //   cool.forEach(element => {
+  //     element.style.border = 'solid 3px red'
+  //   });
+  // } 
   
-  elements.forEach(element => {
-    if(element.matches(':not(.cool)')) {
-      element.style.display = 'none'
-    }
-  })
+  // links.forEach(link => {
+  //   if(link.matches(':not(.cool)')) {
+  //     link.style.display = 'none'
+  //   }
+  // })
 
-  cards.forEach(card => {
-    if(card.matches(':not(.cool)')) {
-      card.style.display ='none'
-    }
-  })
+  // cards.forEach(card => {
+  //   if(card.matches(':not(.cool)')) {
+  //     card.style.display ='none'
+  //   }
+  // })
 } 
 
 window.onhashchange = handleHashChange;
+
+showAllTours.addEventListener('click', function() {
+  history.replaceState({}, document.title, window.location.href.split('#')[0]);
+
+  showAllTours.style.backgroundColor = 'gray'
+  showAllTours.style.opacity = '.2'
+
+  cards.forEach(card => {
+    card.style.display = "block"
+  })
+
+  links.forEach(link => {
+    link.style.display = "block"
+  })
+})
