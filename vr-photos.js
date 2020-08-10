@@ -11,6 +11,22 @@ const studentCenterBookStore = document.getElementById(
 );
 const studentParking = document.getElementById("studentParking");
 const studentParkingGarage = document.getElementById("studentParkingGarage");
+const chkdExterior = document.getElementById('chkdExterior')
+const evmsCourtyard = document.getElementById('evmsCourtyard')
+const lester355 = document.getElementById('lester355')
+const lester107 = document.getElementById('lester107')
+const artTherapy = document.getElementById('artTherapy')
+const lester411 = document.getElementById('lester411')
+const lewis2122 = document.getElementById('lewis2122')
+const lewis3073 = document.getElementById('lewis3073')
+const lewis3030 = document.getElementsByTagName('lewis3030')
+const lewis3078 = document.getElementById('lewis3078')
+const libraryCompLab = document.getElementById('libraryCompLab')
+const libraryFirstFloor = document.getElementById('libraryFirstFloor')
+const libraryStudyRoom = document.getElementById('libraryStudyRoom')
+const roperAuditorium = document.getElementById('roperAuditorium')
+const sentaraExterior = document.getElementById('sentaraExterior')
+const towneBankLawn = document.getElementById('towneBankLawn')
 
 const anatomyLabCard = document.getElementById("anatomyLabCard");
 const brickellLibraryCard = document.getElementById("brickellLibraryCard");
@@ -57,6 +73,20 @@ const vrViews = {
   studentCenterBookStoreView: "./vr-views/student-center-bookstore.html",
   studentParkingView: "./vr-views/student-parking.html",
   studentParkingGarageView: "./vr-views/student-parking-garage.html",
+  chkdExteriour: './vr-views/chkd-exterior.html',
+  evmsCourtyard: './vr-views/evms-courtyard.html',
+  lester355: './vr-views/lester-355.html',
+  lester411: './vr-views/lester-411.html',
+  lewis2122: './vr-views/lewis-2122.html',
+  lewis3030: './vr-views/lewis-3030.html',
+  lewis3073: './vr-views/lewis-3073.html',
+  lewis3078: './vr-views/lewis-3078.html',
+  libraryCompLab: './vr-views/library-comp-lab.html',
+  libraryFirstFloor: './vr-views/library-first-floor.html',
+  libraryStudyRoom: './vr-views/library-study-room.html',
+  roperAuditorium: './vr-views/roper-auditorium.html',
+  sentaraExteririor: './vr-views/sentara-exterior.html',
+  towneBankLawn: './vr-views/townebank-lawn.html'
 };
 
 // video tours
@@ -111,6 +141,48 @@ attachLink(vrViews.studentParkingView, studentParking);
 
 // student parking garage
 attachLink(vrViews.studentParkingGarageView, studentParkingGarage);
+
+// chkd exterior
+attachLink(vrViews.chkdExteriour, chkdExterior)
+
+// evms courtyard 
+attachLink(vrViews.evmsCourtyard, evmsCourtyard)
+
+// lester 355 
+attachLink(vrViews.lester355, lester355)
+
+// lester 411 
+attachLink(vrViews.lester411, lester411)
+
+// lewis 2122 
+attachLink(vrViews.lewis2122, lewis2122)
+
+// lewis 3030 
+attachLink(vrViews.lewis3030, lewis3030)
+
+// lewis 3073
+attachLink(vrViews.lewis3073, lewis3073)
+
+// lewis 3078
+attachLink(vrViews.lewis3078, lewis3078)
+
+// library comp lab
+attachLink(vrViews.libraryCompLab, libraryCompLab)
+
+// library first floor
+attachLink(vrViews.libraryFirstFloor, libraryFirstFloor)
+
+// library study room
+attachLink(vrViews.libraryStudyRoom, libraryStudyRoom)
+
+// roper auditorium
+attachLink(vrViews.roperAuditorium, roperAuditorium)
+
+// sentara exterior
+attachLink(vrViews.sentaraExteririor, sentaraExterior)
+
+// towne bank lawn
+attachLink(vrViews.towneBankLawn, towneBankLawn)
 
 // function to set the url to view the vr photos
 function attachLink(url, element) {
