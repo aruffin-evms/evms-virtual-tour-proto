@@ -28,23 +28,23 @@ const roperAuditorium = document.getElementById('roperAuditorium')
 const sentaraExterior = document.getElementById('sentaraExterior')
 const towneBankLawn = document.getElementById('towneBankLawn')
 
-const anatomyLabCard = document.getElementById("anatomyLabCard");
-const brickellLibraryCard = document.getElementById("brickellLibraryCard");
-const communityCenterCard = document.getElementById("communityCenterCard");
-const multidiscLabCard = document.getElementById("multidiscLabCard");
-const sharedCampusCard = document.getElementById("sharedCampusCard");
-const studentParkingCard = document.getElementById("studentParkingCard");
-const townBankCard = document.getElementById("townBankCard");
+// const anatomyLabCard = document.getElementById("anatomyLabCard");
+// const brickellLibraryCard = document.getElementById("brickellLibraryCard");
+// const communityCenterCard = document.getElementById("communityCenterCard");
+// const multiDiscLabCard = document.getElementById("multiDiscLabCard");
+// const sharedCampusCard = document.getElementById("sharedCampusCard");
+// const studentParkingCard = document.getElementById("studentParkingCard");
+// const townBankCard = document.getElementById("townBankCard");
 
-const anatomyLabThumbnail = document.getElementById("anatomyLabThumbnail");
-const brickellThumbnail = document.getElementById("brickellThumbnail");
-const communityThumbnail = document.getElementById("communityThumbnail");
-const multiDiscThumbnail = document.getElementById("multiDiscThumbnail");
-const sharedCampusThumbnail = document.getElementById("sharedCampusThumbnail");
-const studentParkingThumbnail = document.getElementById(
-  "studentParkingThumbnail"
-);
-const townBankThumbnail = document.getElementById("townBankThumbnail");
+// const anatomyLabThumbnail = document.getElementById("anatomyLabThumbnail");
+// const brickellThumbnail = document.getElementById("brickellThumbnail");
+// const communityThumbnail = document.getElementById("communityThumbnail");
+// const multiDiscThumbnail = document.getElementById("multiDiscThumbnail");
+// const sharedCampusThumbnail = document.getElementById("sharedCampusThumbnail");
+// const studentParkingThumbnail = document.getElementById(
+//   "studentParkingThumbnail"
+// );
+// const townBankThumbnail = document.getElementById("townBankThumbnail");
 
 const virtualTourModal = document.getElementById("virtualTourModal");
 const closeModal = document.getElementById("closeModal");
@@ -101,6 +101,10 @@ const videoAssets = {
   studentParking: "./assets/videos/student-parking-virtual-tour-clips.mp4",
   towneBankLawn:
     "./assets/videos/towne-bank-lawn-and-green-spaces-virtual-tour-clips.mp4",
+    artTherapyOffices: "./assets/videos/art-therapy-offices-300-305.mp4",
+    artTherapy2122: "./assets/videos/art-therapy-lewis-2122.mp4",
+    artTherapy107: "./assets/videos/art-therapy-room-107.mp4",
+    artTherapy411: "./assets/videos/art-therapy-room-411.mp4"
 };
 
 const hashFilters = {
@@ -230,7 +234,7 @@ function injectVideoSource(id) {
       showModal(videoAssets.communityCenter);
       break;
 
-    case "multidiscLabCard":
+    case "multiDiscLabCard":
     case "multiDiscThumbnail":
       showModal(videoAssets.multiDisclab);
       break;
@@ -248,6 +252,26 @@ function injectVideoSource(id) {
     case "townBankCard":
     case "townBankThumbnail":
       showModal(videoAssets.towneBankLawn);
+      break;
+
+    case "artTherapyOfficesCard":
+    case "artTherapyOfficesThumbnail":
+      showModal(videoAssets.artTherapyOffices)
+      break;
+
+    case "artTherapy2122Card": 
+    case "artTherapy2122Thumbnail": 
+      showModal(videoAssets.artTherapy2122)
+      break;
+
+    case "artTherapy107Card":
+    case "artTherapy107Thumbnail":
+      showModal(videoAssets.artTherapy107)
+      break;
+
+    case "artTherapy411Card":
+    case "artTherapy411Thumbnail":
+      showModal(videoAssets.artTherapy411)
       break;
   }
 }

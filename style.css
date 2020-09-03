@@ -316,17 +316,26 @@ body {
 .virtual-tours__icon {
   color: white;
   position: relative;
-  top: 80%;
+  bottom: 35px;
   left: 4%;
+  z-index: 7;
 }
 
 .virtual-tours__content__card__thumbnail {
-  height: 200px;
+  max-height: 200px;
+  height: 100%;
   width: 100%;
   border-radius: 5px 5px 0 0 ;
+  /* position: relative; */
+  /* z-index: 2; */
   background-color: gray;
 }
 
+.virtual-tours__content__card__thumbnail__image {
+  /* height: 100%; */
+  object-fit: cover;
+  border-radius: 5px;
+}
 .virtual-tours__content__card__title {
   font-size: 24px;
   color: #943001;
