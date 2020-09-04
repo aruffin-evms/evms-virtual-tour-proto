@@ -25,7 +25,6 @@ const libraryStudyRoom = document.getElementById('libraryStudyRoom')
 const roperAuditorium = document.getElementById('roperAuditorium')
 const sentaraExterior = document.getElementById('sentaraExterior')
 const towneBankLawn = document.getElementById('towneBankLawn')
-// const artTherapy = document.getElementById("artTherapy")
 
 const virtualTourModal = document.getElementById("virtualTourModal");
 const closeModal = document.getElementById("closeModal");
@@ -430,7 +429,7 @@ function getButtonID(id) {
     case "hamptonRoadsCta":
       addVideoToModule(videoAssets.sharedCampus, video)
       break;
-      
+
     default:
       break;
   }
