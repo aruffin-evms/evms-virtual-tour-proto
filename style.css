@@ -127,14 +127,41 @@ body {
 .virtual-tours__media {
   height: 300px;
   width: 100%;
-  background-color: gray;
+  background-color: black;
   margin-top: 50px;
 }
 
 @media (min-width: 900px) {
   .virtual-tours__media {
-    height: 700px;
+    max-height: 600px;
+    height: auto;
   }
+}
+
+.virtual-tours__media__image-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.virtual-tours__media__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  top: -50px;
+}
+
+.virtual-tours__media__video {
+  width: 100%;
+  height: auto;
+}
+
+.virtual-tours__placeholder-text {
+  font-size: 50px;
+  color: red;
+  text-align: center;
+  position: relative;
+  z-index: 8;
 }
 
 .virtual-tours__ctas {
@@ -173,6 +200,8 @@ body {
   margin-top: 20px;
   border-radius: 5px;
   transition: .5s all;
+  border: 0;
+  cursor: pointer;
 }
 
 @media (min-width: 900px) {
