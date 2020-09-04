@@ -6,9 +6,7 @@ const lesterRoomVr = document.getElementById("lesterRoomVr");
 const lesterHallLobbyVr = document.getElementById("lesterHallLobbyVr");
 const mdlVr = document.getElementById("mdlVr");
 const paAdminOffices = document.getElementById("paAdminOffices");
-const studentCenterBookStore = document.getElementById(
-  "studentCenterBookStore"
-);
+const studentCenterBookStore = document.getElementById("studentCenterBookStore");
 const studentParking = document.getElementById("studentParking");
 const studentParkingGarage = document.getElementById("studentParkingGarage");
 const chkdExterior = document.getElementById('chkdExterior')
@@ -27,24 +25,7 @@ const libraryStudyRoom = document.getElementById('libraryStudyRoom')
 const roperAuditorium = document.getElementById('roperAuditorium')
 const sentaraExterior = document.getElementById('sentaraExterior')
 const towneBankLawn = document.getElementById('towneBankLawn')
-
-// const anatomyLabCard = document.getElementById("anatomyLabCard");
-// const brickellLibraryCard = document.getElementById("brickellLibraryCard");
-// const communityCenterCard = document.getElementById("communityCenterCard");
-// const multiDiscLabCard = document.getElementById("multiDiscLabCard");
-// const sharedCampusCard = document.getElementById("sharedCampusCard");
-// const studentParkingCard = document.getElementById("studentParkingCard");
-// const townBankCard = document.getElementById("townBankCard");
-
-// const anatomyLabThumbnail = document.getElementById("anatomyLabThumbnail");
-// const brickellThumbnail = document.getElementById("brickellThumbnail");
-// const communityThumbnail = document.getElementById("communityThumbnail");
-// const multiDiscThumbnail = document.getElementById("multiDiscThumbnail");
-// const sharedCampusThumbnail = document.getElementById("sharedCampusThumbnail");
-// const studentParkingThumbnail = document.getElementById(
-//   "studentParkingThumbnail"
-// );
-// const townBankThumbnail = document.getElementById("townBankThumbnail");
+// const artTherapy = document.getElementById("artTherapy")
 
 const virtualTourModal = document.getElementById("virtualTourModal");
 const closeModal = document.getElementById("closeModal");
@@ -64,6 +45,7 @@ const removeHash = history.replaceState(
 // vr html docs
 const vrViews = {
   anatomyLabView: "./vr-views/anatomy-lab.html",
+  artTherapyOffices: "./vr-views/art-therapy.html",
   castClassroomView: "./vr-views/cast-classroom.html",
   castLabView: "./vr-views/cast-lab.html",
   lesterRoom: "./vr-views/lester-room.html",
@@ -96,7 +78,7 @@ const videoAssets = {
     "./assets/videos/brickell-medical-science-library-virtual-tour-clips.mp4",
   communityCenter:
     "./assets/videos/hampton-roads-community-foundation-student-center-virtual-tour-clips.mp4",
-  multiDisclab: "./assets/videos/multidisciplinary-lab-virtual-tour-clips.mp4",
+  multiDisclab: "./assets/videos/multidisciplinary-labs-virtual-tour-clips.mp4",
   sharedCampus: "./assets/videos/shared-campus-virtual-tour-clips.mp4",
   studentParking: "./assets/videos/student-parking-virtual-tour-clips.mp4",
   towneBankLawn:
@@ -118,6 +100,9 @@ const hashFilters = {
 
 // anatomy lab vr
 attachLink(vrViews.anatomyLabView, anatomyLabVr);
+
+// art therapy
+// attachLink(vrViews.artTherapyOffices, artTherapy);
 
 // cast classroom vr
 attachLink(vrViews.castClassroomView, castClassroomVr);
@@ -190,7 +175,7 @@ attachLink(vrViews.towneBankLawn, towneBankLawn)
 
 // function to set the url to view the vr photos
 function attachLink(url, element) {
-  return (element.href = url);
+  return element.href = url;
 }
 
 // get the id of the element when clicked
@@ -218,6 +203,7 @@ function showModal(source) {
 
 // add video source to modal video
 function injectVideoSource(id) {
+  console.log(id)
   switch (id) {
     case "anatomyLabCard":
     case "anatomyLabThumbnail":
