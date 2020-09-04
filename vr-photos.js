@@ -30,6 +30,10 @@ const towneBankLawn = document.getElementById('towneBankLawn')
 const virtualTourModal = document.getElementById("virtualTourModal");
 const closeModal = document.getElementById("closeModal");
 
+const video = document.getElementById("video")
+const placeholderImage = document.getElementById("placeholderImage")
+const placeholderText = document.getElementById("placeholderText")
+
 const html = document.querySelector("html");
 
 const links = document.querySelectorAll(".virtual-tours__link");
@@ -179,7 +183,7 @@ function attachLink(url, element) {
 }
 
 // get the id of the element when clicked
-function findID() {
+function findVideoID() {
   document
     .querySelectorAll(".virtual-tours__video")
     .forEach(function (element) {
@@ -191,7 +195,7 @@ function findID() {
     });
 }
 
-findID();
+findVideoID();
 
 // show modal
 function showModal(source) {
@@ -201,7 +205,7 @@ function showModal(source) {
   modalVideo.play();
 }
 
-// add video source to modal video
+// switch statement to add video to modals
 function injectVideoSource(id) {
   console.log(id)
   switch (id) {
@@ -389,3 +393,48 @@ showAllTours.addEventListener("click", function () {
     link.style.display = "block";
   });
 });
+
+
+function findButtonID() {
+  document.querySelectorAll(".virtual-tours__cta").forEach(function (button) {
+    button.onclick = function(event) {
+      let id = event.target.id
+      getButtonID(id)
+    }
+  })
+ }
+
+ findButtonID() 
+
+function addVideoToModule(videoAsset) {
+  placeholderImage.style.display = "none"
+  placeholderText.style.display = "none"
+  video.src = videoAsset
+  video.style.display = "block"
+  video.style.animation = "fadeIn 2s"
+  video.play()
+  console.log('clcik')
+}
+
+//  switch statement to add video to media module
+function getButtonID(id) {
+  switch (id) {
+    case "sharedCampusCta":
+      addVideoToModule(videoAssets.sharedCampus, video)
+      break;
+
+    case "simCenterCta":
+      addVideoToModule(videoAssets.anatomyLab, video)
+      break;
+
+    case "hamptonRoadsCta":
+      addVideoToModule(videoAssets.sharedCampus, video)
+      break;
+      
+    default:
+      break;
+  }
+}
+
+
+
