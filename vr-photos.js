@@ -29,7 +29,8 @@ const towneBankLawn = document.getElementById('towneBankLawn')
 const virtualTourModal = document.getElementById("virtualTourModal");
 const closeModal = document.getElementById("closeModal");
 
-const video = document.getElementById("video")
+const video = document.getElementById("video");
+const mediaModule = document.querySelector('.virtual-tours__media');
 const placeholderImage = document.getElementById("placeholderImage")
 const placeholderText = document.getElementById("placeholderText")
 
@@ -407,7 +408,8 @@ function findButtonID() {
 
 function addVideoToModule(videoAsset) {
   placeholderImage.style.display = "none"
-  placeholderText.style.display = "none"
+  mediaModule.style.backgroundColor = 'black'
+  mediaModule.style.height = '506px'
   video.src = videoAsset
   video.style.display = "block"
   video.style.animation = "fadeIn 2s"
