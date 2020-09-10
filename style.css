@@ -35,6 +35,7 @@ tr, th, td {
 
 body {
   overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 @keyframes fadeIn {
@@ -357,14 +358,15 @@ body {
 }
 
 .virtual-tours__content__card__thumbnail__image {
-  /* height: 100%; */
   object-fit: cover;
   border-radius: 5px;
 }
+
 .virtual-tours__content__card__title {
   font-size: 20px;
   color: #943001;
   padding-left: 10px;
+  padding-right: 10px;
   padding-top: 10px;
 }
 
@@ -377,8 +379,6 @@ body {
   display: inline-block;
   position: relative;
 }
-
-
 
 .virtual-tours__content__title span:before,
 .virtual-tours__content__title span:after {
@@ -438,23 +438,6 @@ body {
 .filter {
   display: none;
 }
-
-.birds {
-  background-color: maroon;
-}
-
-.fish {
-  background-color: midnightblue;
-}
-
-.lizards {
-  background-color: olivedrab;
-}
-
-.flower {
- background-color: palevioletred;
-}
-
 
 .virtual-tours__content__video p {
   text-align: center;

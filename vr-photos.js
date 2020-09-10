@@ -46,6 +46,105 @@ const removeHash = history.replaceState(
   window.location.href.split("#")[0]
 );
 
+const vrContent = {
+  anatomyLab: {
+    trigger: document.getElementById("anatomyLabVr"),
+    view: "./vr-views/anatomy-lab.html"
+  },
+  castClassroom: {
+    trigger: document.getElementById("castClassroomVr"),
+    view: "./vr-views/cast-classroom.html"
+  },
+  castLab: {
+    trigger: document.getElementById("castLabVr"),
+    view: "./vr-views/cast-lab.html"
+  },
+  lesterRoom: {
+    trigger: document.getElementById("lesterRoomVr"),
+    view: "./vr-views/lester-room.html"
+  },
+  lesterHall: {
+    trigger: document.getElementById("lesterHallLobbyVr"),
+    view: "./vr-views/lester-hall-lobby.html"
+  },
+  mdLab: {
+    trigger: document.getElementById("mdlVr"),
+    view: "./vr-views/mdl.html"
+  },
+  paAdminOffices: {
+    trigger: document.getElementById("paAdminOffices"),
+    view: "./vr-views/pa-admin-offices.html"
+  },
+  studentCenterBookStore: {
+    trigger: document.getElementById("studentCenterBookStore"),
+    view: "./vr-views/student-center-bookstore.html"
+  },
+  studentParking: {
+    trigger: document.getElementById("studentParking"),
+    view: "./vr-views/student-parking.html"
+  },
+  studentParkingGarage: {
+    trigger: document.getElementById("studentParkingGarage"),
+    view: "./vr-views/student-parking-garage.html"
+  },
+  chkdExterior: {
+    trigger: document.getElementById('chkdExterior'),
+    view: './vr-views/chkd-exterior.html' 
+  },
+  evmsCourtyard: {
+    trigger: document.getElementById('evmsCourtyard'),
+    view: './vr-views/evms-courtyard.html' 
+  },
+  lester355: {
+    trigger: document.getElementById('lester355'),
+    view: './vr-views/lester-355.html'
+  },
+  lester411: {
+    trigger: document.getElementById('lester411'),
+    view: './vr-views/lester-411.html'
+  },
+  lewis2122: {
+    trigger: document.getElementById('lewis2122'),
+    view: './vr-views/lewis-2122.html'
+  },
+  lewis3030: {
+    trigger: document.getElementsByTagName('lewis3030'),
+    view: './vr-views/lewis-3030.html'
+  },
+  lewis3073: {
+    trigger: document.getElementById('lewis3073'),
+    view: './vr-views/lewis-3073.html'
+  },
+  lewis3078: {
+    trigger: document.getElementById('lewis3078'),
+    view: './vr-views/lewis-3078.html' 
+  },
+  libraryCompLab: {
+    trigger: document.getElementById('libraryCompLab'),
+    view: './vr-views/library-comp-lab.html'
+  },
+  library: {
+    trigger: document.getElementById('libraryFirstFloor'),
+    view: './vr-views/library-first-floor.html'
+  },
+  libraryStudyRoom: {
+    trigger: document.getElementById('libraryStudyRoom'),
+    view: './vr-views/library-study-room.html'
+  },
+  roperAuditorium: {
+    trigger: document.getElementById('roperAuditorium'),
+    view: './vr-views/roper-auditorium.html',
+  },
+  sentaraExterior: {
+    trigger: document.getElementById('sentaraExterior'),
+    view: './vr-views/sentara-exterior.html'
+  },
+  towneBank: {
+    trigger: document.getElementById('towneBankLawn'),
+    view: './vr-views/townebank-lawn.html'
+  }
+}
+
 // vr html docs
 const vrViews = {
   anatomyLabView: "./vr-views/anatomy-lab.html",
@@ -103,7 +202,7 @@ const hashFilters = {
 };
 
 // anatomy lab vr
-attachLink(vrViews.anatomyLabView, anatomyLabVr);
+attachLink(vrContent.anatomyLab.view, vrContent.anatomyLab.trigger);
 
 // art therapy
 // attachLink(vrViews.artTherapyOffices, artTherapy);
@@ -414,7 +513,6 @@ function addVideoToModule(videoAsset) {
   video.style.display = "block"
   video.style.animation = "fadeIn 2s"
   video.play()
-  console.log('clcik')
 }
 
 //  switch statement to add video to media module
