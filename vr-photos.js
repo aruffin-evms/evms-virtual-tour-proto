@@ -114,8 +114,17 @@ const vrContent = {
   towneBank: {
     trigger: document.getElementById('towneBankLawn'),
     view: './vr-views/townebank-lawn.html'
+  },
+  lester107: {
+    trigger: document.getElementById('lester107'),
+    view: './vr-views/lester-107.html'
   }
 }
+
+// debug 107
+document.getElementById('lester107').addEventListener('click', function() {
+  console.log('clicked')
+})
 
 // video tours
 const videoAssets = {
@@ -132,12 +141,20 @@ const videoAssets = {
     artTherapyOffices: "./assets/videos/art-therapy-offices-300-305.mp4",
     artTherapy2122: "./assets/videos/art-therapy-lewis-2122.mp4",
     artTherapy107: "./assets/videos/art-therapy-room-107.mp4",
-    artTherapy411: "./assets/videos/art-therapy-room-411.mp4"
+    artTherapy411: "./assets/videos/art-therapy-room-411.mp4",
+    mccombsAuditorium: "./assets/videos/mccombs-auditorium.mp4",
+    proteomics: "./assets/videos/biomedical-sciences-proteomics.mp4",
+    cytometry: "./assets/videos/biomedical-sciences-flow-cytometry.mp4",
+    cancerCenter: "./assets/videos/biomedical-sciences-cancer-center-labs.mp4",
+    jonesInstitute: "./assets/videos/jones-institute.mp4",
+    lesterHall: "./assets/videos/lester-hall.mp4",
+    lewisHall: "./assets/videos/lewis-hall.mp4",
+    waitzerHall: "./assets/videos/waitzer-hall.mp4"
 };
 
 const hashFilters = {
   student: "#student",
-  physicianAssistant: "#phys-assistant",
+  pathAssistant: "#path-assistant",
   general: "#general",
   lab: "#lab",
   library: "#library",
@@ -215,6 +232,9 @@ attachLink(vrContent.sentaraExterior.view, vrContent.sentaraExterior.trigger)
 
 // towne bank lawn
 attachLink(vrContent.towneBank.view, vrContent.towneBank.trigger)
+
+// lester 107
+attachLink(vrContent.lester107.view, vrContent.lester107.trigger)
 
 // function to set the url to view the vr photos
 function attachLink(url, element) {
@@ -302,6 +322,46 @@ function injectVideoSource(id) {
     case "artTherapy411Thumbnail":
       showModal(videoAssets.artTherapy411)
       break;
+
+    case "mccombsAuditoriumCard":
+    case "mccombsAuditoriumThumbnail":
+      showModal(videoAssets.mccombsAuditorium)
+      break;
+
+    case "proteomicsCard":
+    case "proteomicsThumbnail":
+      showModal(videoAssets.proteomics)
+      break;
+
+    case "cytometryCard":
+    case "cytometryThumbnail":
+      showModal(videoAssets.cytometry)
+      break;
+
+    case "cancerCenterCard":
+    case "cancerCenterThumbnail":
+      showModal(videoAssets.cancerCenter)
+      break;
+
+    case "jonesInstituteCard":
+    case "jonesInstituteThumbnail":
+      showModal(videoAssets.jonesInstitute)
+      break;
+
+    case "lesterHallCard":
+    case "lesterHallThumbnail":
+      showModal(videoAssets.lesterHall)
+      break;
+
+    case "lewisHallCard":
+    case "lewisHallThumbnail":
+      showModal(videoAssets.lewisHall)
+      break;
+
+    case "waitzerHallCard":
+    case "waitzerHallThumbnail":
+      showModal(videoAssets.waitzerHall)
+      break;
   }
 }
 
@@ -320,6 +380,8 @@ function enableScroll() {
 
 function handleHashChange() {
   showAllTours.style.display = "flex";
+  showAllTours.style.background = '#943001'
+  showAllTours.style.opacity = '1'
 
   const url = location.hash;
 
@@ -423,6 +485,7 @@ showAllTours.addEventListener("click", function () {
 
   showAllTours.style.backgroundColor = "gray";
   showAllTours.style.opacity = ".2";
+  showAllTours.style.cursor = 'not-allowed'
 
   cards.forEach((card) => {
     card.style.display = "block";
