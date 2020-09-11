@@ -1,31 +1,3 @@
-const anatomyLabVr = document.getElementById("anatomyLabVr");
-const anatomyLabVideo = document.getElementById("anatomyLabVideo");
-const castClassroomVr = document.getElementById("castClassroomVr");
-const castLabVr = document.getElementById("castLabVr");
-const lesterRoomVr = document.getElementById("lesterRoomVr");
-const lesterHallLobbyVr = document.getElementById("lesterHallLobbyVr");
-const mdlVr = document.getElementById("mdlVr");
-const paAdminOffices = document.getElementById("paAdminOffices");
-const studentCenterBookStore = document.getElementById("studentCenterBookStore");
-const studentParking = document.getElementById("studentParking");
-const studentParkingGarage = document.getElementById("studentParkingGarage");
-const chkdExterior = document.getElementById('chkdExterior')
-const evmsCourtyard = document.getElementById('evmsCourtyard')
-const lester355 = document.getElementById('lester355')
-const lester107 = document.getElementById('lester107')
-const artTherapy = document.getElementById('artTherapy')
-const lester411 = document.getElementById('lester411')
-const lewis2122 = document.getElementById('lewis2122')
-const lewis3073 = document.getElementById('lewis3073')
-const lewis3030 = document.getElementsByTagName('lewis3030')
-const lewis3078 = document.getElementById('lewis3078')
-const libraryCompLab = document.getElementById('libraryCompLab')
-const libraryFirstFloor = document.getElementById('libraryFirstFloor')
-const libraryStudyRoom = document.getElementById('libraryStudyRoom')
-const roperAuditorium = document.getElementById('roperAuditorium')
-const sentaraExterior = document.getElementById('sentaraExterior')
-const towneBankLawn = document.getElementById('towneBankLawn')
-
 const virtualTourModal = document.getElementById("virtualTourModal");
 const closeModal = document.getElementById("closeModal");
 
@@ -145,35 +117,6 @@ const vrContent = {
   }
 }
 
-// vr html docs
-const vrViews = {
-  anatomyLabView: "./vr-views/anatomy-lab.html",
-  artTherapyOffices: "./vr-views/art-therapy.html",
-  castClassroomView: "./vr-views/cast-classroom.html",
-  castLabView: "./vr-views/cast-lab.html",
-  lesterRoom: "./vr-views/lester-room.html",
-  lesterHallLobbyView: "./vr-views/lester-hall-lobby.html",
-  mdlView: "./vr-views/mdl.html",
-  paAdminOfficesView: "./vr-views/pa-admin-offices.html",
-  studentCenterBookStoreView: "./vr-views/student-center-bookstore.html",
-  studentParkingView: "./vr-views/student-parking.html",
-  studentParkingGarageView: "./vr-views/student-parking-garage.html",
-  chkdExteriour: './vr-views/chkd-exterior.html',
-  evmsCourtyard: './vr-views/evms-courtyard.html',
-  lester355: './vr-views/lester-355.html',
-  lester411: './vr-views/lester-411.html',
-  lewis2122: './vr-views/lewis-2122.html',
-  lewis3030: './vr-views/lewis-3030.html',
-  lewis3073: './vr-views/lewis-3073.html',
-  lewis3078: './vr-views/lewis-3078.html',
-  libraryCompLab: './vr-views/library-comp-lab.html',
-  libraryFirstFloor: './vr-views/library-first-floor.html',
-  libraryStudyRoom: './vr-views/library-study-room.html',
-  roperAuditorium: './vr-views/roper-auditorium.html',
-  sentaraExteririor: './vr-views/sentara-exterior.html',
-  towneBankLawn: './vr-views/townebank-lawn.html'
-};
-
 // video tours
 const videoAssets = {
   anatomyLab: "./assets/videos/anatomy-lab-virtual-tour-clips.mp4",
@@ -204,77 +147,74 @@ const hashFilters = {
 // anatomy lab vr
 attachLink(vrContent.anatomyLab.view, vrContent.anatomyLab.trigger);
 
-// art therapy
-// attachLink(vrViews.artTherapyOffices, artTherapy);
-
 // cast classroom vr
-attachLink(vrViews.castClassroomView, castClassroomVr);
+attachLink(vrContent.castClassroom.view, vrContent.castClassroom.trigger);
 
 // cast lab vr
-attachLink(vrViews.castLabView, castLabVr);
+attachLink(vrContent.castLab.view, vrContent.castLab.trigger);
 
 // lester room vr
-attachLink(vrViews.lesterRoom, lesterRoomVr);
+attachLink(vrContent.lesterRoom.view, vrContent.lesterRoom.trigger);
 
 // lester hall lobby vr
-attachLink(vrViews.lesterHallLobbyView, lesterHallLobbyVr);
+attachLink(vrContent.lesterHall.view, vrContent.lesterHall.trigger);
 
 // mdl vr
-attachLink(vrViews.mdlView, mdlVr);
+attachLink(vrContent.mdLab.view, vrContent.mdLab.trigger);
 
 // pa admin offices vr
-attachLink(vrViews.paAdminOfficesView, paAdminOffices);
+attachLink(vrContent.paAdminOffices.view, vrContent.paAdminOffices.trigger);
 
 // student center bookstore
-attachLink(vrViews.studentCenterBookStoreView, studentCenterBookStore);
+attachLink(vrContent.studentCenterBookStore.view, vrContent.studentCenterBookStore.trigger);
 
 // student parking
-attachLink(vrViews.studentParkingView, studentParking);
+attachLink(vrContent.studentParking.view, vrContent.studentParking.trigger);
 
 // student parking garage
-attachLink(vrViews.studentParkingGarageView, studentParkingGarage);
+attachLink(vrContent.studentParkingGarage.view, vrContent.studentParkingGarage.trigger);
 
 // chkd exterior
-attachLink(vrViews.chkdExteriour, chkdExterior)
+attachLink(vrContent.chkdExterior.view, vrContent.chkdExterior.trigger)
 
 // evms courtyard 
-attachLink(vrViews.evmsCourtyard, evmsCourtyard)
+attachLink(vrContent.evmsCourtyard.view, vrContent.evmsCourtyard.trigger)
 
 // lester 355 
-attachLink(vrViews.lester355, lester355)
+attachLink(vrContent.lester355.view, vrContent.lester355.trigger)
 
 // lester 411 
-attachLink(vrViews.lester411, lester411)
+attachLink(vrContent.lester411.view, vrContent.lester411.trigger)
 
 // lewis 2122 
-attachLink(vrViews.lewis2122, lewis2122)
+attachLink(vrContent.lewis2122.view, vrContent.lewis2122.trigger)
 
 // lewis 3030 
-attachLink(vrViews.lewis3030, lewis3030)
+attachLink(vrContent.lewis3030.view, vrContent.lewis3030.trigger)
 
 // lewis 3073
-attachLink(vrViews.lewis3073, lewis3073)
+attachLink(vrContent.lewis3073.view, vrContent.lewis3073.trigger)
 
 // lewis 3078
-attachLink(vrViews.lewis3078, lewis3078)
+attachLink(vrContent.lewis3078.view, vrContent.lewis3078.trigger)
 
 // library comp lab
-attachLink(vrViews.libraryCompLab, libraryCompLab)
+attachLink(vrContent.libraryCompLab.view, vrContent.libraryCompLab.trigger)
 
 // library first floor
-attachLink(vrViews.libraryFirstFloor, libraryFirstFloor)
+attachLink(vrContent.library.view, vrContent.library.trigger)
 
 // library study room
-attachLink(vrViews.libraryStudyRoom, libraryStudyRoom)
+attachLink(vrContent.libraryCompLab.view, vrContent.libraryStudyRoom.trigger)
 
 // roper auditorium
-attachLink(vrViews.roperAuditorium, roperAuditorium)
+attachLink(vrContent.roperAuditorium.view, vrContent.roperAuditorium.trigger)
 
 // sentara exterior
-attachLink(vrViews.sentaraExteririor, sentaraExterior)
+attachLink(vrContent.sentaraExterior.view, vrContent.sentaraExterior.trigger)
 
 // towne bank lawn
-attachLink(vrViews.towneBankLawn, towneBankLawn)
+attachLink(vrContent.towneBank.view, vrContent.towneBank.trigger)
 
 // function to set the url to view the vr photos
 function attachLink(url, element) {
@@ -505,16 +445,6 @@ function findButtonID() {
 
  findButtonID() 
 
-function addVideoToModule(videoAsset) {
-  placeholderImage.style.display = "none"
-  mediaModule.style.backgroundColor = 'black'
-  mediaModule.style.height = '506px'
-  video.src = videoAsset
-  video.style.display = "block"
-  video.style.animation = "fadeIn 2s"
-  video.play()
-}
-
 //  switch statement to add video to media module
 function getButtonID(id) {
   switch (id) {
@@ -533,6 +463,16 @@ function getButtonID(id) {
     default:
       break;
   }
+}
+
+function addVideoToModule(videoAsset) {
+  placeholderImage.style.display = "none"
+  mediaModule.style.backgroundColor = 'black'
+  mediaModule.style.height = '506px'
+  video.src = videoAsset
+  video.style.display = "block"
+  video.style.animation = "fadeIn 2s"
+  video.play()
 }
 
 
