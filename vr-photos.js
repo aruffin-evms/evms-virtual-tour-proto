@@ -146,6 +146,7 @@ const videoAssets = {
     proteomics: "./assets/videos/biomedical-sciences-proteomics.mp4",
     cytometry: "./assets/videos/biomedical-sciences-flow-cytometry.mp4",
     cancerCenter: "./assets/videos/biomedical-sciences-cancer-center-labs.mp4",
+    hofheimerHall: "./assets/videos/hofheimer-hall.mp4",
     jonesInstitute: "./assets/videos/jones-institute.mp4",
     lesterHall: "./assets/videos/lester-hall.mp4",
     lewisHall: "./assets/videos/lewis-hall.mp4",
@@ -341,6 +342,11 @@ function injectVideoSource(id) {
     case "cancerCenterCard":
     case "cancerCenterThumbnail":
       showModal(videoAssets.cancerCenter)
+      break;
+      
+    case "hofheimerHallCard":
+    case "hofheimerHallThumbnail":
+      showModal(videoAssets.hofheimerHall)
       break;
 
     case "jonesInstituteCard":
