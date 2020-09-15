@@ -514,18 +514,22 @@ function findButtonID() {
 
  findButtonID() 
 
+ const iframe = document.getElementById('iframeModule')
 //  switch statement to add video to media module
 function getButtonID(id) {
   switch (id) {
     case "sharedCampusCta":
+      iframe.style.display = 'none'
       addVideoToModule(videoAssets.sharedCampus, video)
       break;
 
     case "simCenterCta":
-      addVideoToModule(videoAssets.anatomyLab, video)
+      // https://www.youtube.com/embed/playlist?list=PL9ZDFDp9CGySJaR7ggu5Kd_bHlaAsyrRW
+      addIframeToModule("https://www.youtube.com/embed/playlist?list=PL9ZDFDp9CGySJaR7ggu5Kd_bHlaAsyrRW")
       break;
 
     case "hamptonRoadsCta":
+      iframe.style.display = 'none'
       addVideoToModule(videoAssets.sharedCampus, video)
       break;
 
@@ -537,11 +541,23 @@ function getButtonID(id) {
 function addVideoToModule(videoAsset) {
   placeholderImage.style.display = "none"
   mediaModule.style.backgroundColor = 'black'
+  
   mediaModule.style.height = 'auto'
   video.src = videoAsset
   video.style.display = "block"
   video.style.animation = "fadeIn 2s"
   video.play()
+}
+
+function addIframeToModule(videoAsset) {
+  placeholderImage.style.display = "none"
+  mediaModule.style.backgroundColor = 'black'
+  mediaModule.style.height = 'auto'
+  video.style.display = "none"
+  iframe.setAttribute('src', 'https://www.youtube.com/embed/playlist?list=PL9ZDFDp9CGySJaR7ggu5Kd_bHlaAsyrRW')
+  iframe.style.width = "100%";
+  iframe.style.height = "100%";
+  iframe.style.display = 'block'
 }
 
 
