@@ -154,12 +154,12 @@ const videoAssets = {
 };
 
 const hashFilters = {
-  student: "#student",
+  physicianAssistant: '#phys-assistant',
   pathAssistant: "#path-assistant",
-  general: "#general",
-  lab: "#lab",
-  library: "#library",
-  classroom: "#classroom",
+  artTherapy: '#art-therapy',
+  biomedicalSciences: '#biomed',
+  surgicalAssisting: '#surgical-assist',
+  general: '#general'
 };
 
 // anatomy lab vr
@@ -392,15 +392,15 @@ function handleHashChange() {
   const url = location.hash;
 
   switch (url) {
-    case hashFilters.student:
+    case hashFilters.surgicalAssisting:
       links.forEach((link) => {
-        if (link.matches(":not(.student)")) {
+        if (link.matches(":not(.surgical-assist)")) {
           link.style.display = "none";
         }
       });
 
       cards.forEach((card) => {
-        if (card.matches(":not(.student)")) {
+        if (card.matches(":not(.surgical-assist)")) {
           card.style.display = "none";
         }
       });
@@ -422,7 +422,52 @@ function handleHashChange() {
 
       break;
 
-    case hashFilters.general:
+    case hashFilters.pathAssistant:
+      links.forEach((link) => {
+        if (link.matches(":not(.path-assistant)")) {
+          link.style.display = "none";
+        }
+      });
+
+      cards.forEach((card) => {
+        if (card.matches(":not(.path-assistant)")) {
+          card.style.display = "none";
+        }
+      });
+
+      break;
+
+    case hashFilters.biomedicalSciences:
+      links.forEach((link) => {
+        if (link.matches(":not(.biomed)")) {
+          link.style.display = "none";
+        }
+      });
+
+      cards.forEach((card) => {
+        if (card.matches(":not(.biomed)")) {
+          card.style.display = "none";
+        }
+      });
+
+      break;
+
+    case hashFilters.artTherapy:
+      links.forEach((link) => {
+        if (link.matches(":not(.art-therapy)")) {
+          link.style.display = "none";
+        }
+      });
+
+      cards.forEach((card) => {
+        if (card.matches(":not(.art-therapy)")) {
+          card.style.display = "none";
+        }
+      });
+
+      break;
+
+      case hashFilters.general:
       links.forEach((link) => {
         if (link.matches(":not(.general)")) {
           link.style.display = "none";
@@ -431,51 +476,6 @@ function handleHashChange() {
 
       cards.forEach((card) => {
         if (card.matches(":not(.general)")) {
-          card.style.display = "none";
-        }
-      });
-
-      break;
-
-    case hashFilters.lab:
-      links.forEach((link) => {
-        if (link.matches(":not(.lab)")) {
-          link.style.display = "none";
-        }
-      });
-
-      cards.forEach((card) => {
-        if (card.matches(":not(.lab)")) {
-          card.style.display = "none";
-        }
-      });
-
-      break;
-
-    case hashFilters.library:
-      links.forEach((link) => {
-        if (link.matches(":not(.library)")) {
-          link.style.display = "none";
-        }
-      });
-
-      cards.forEach((card) => {
-        if (card.matches(":not(.library)")) {
-          card.style.display = "none";
-        }
-      });
-
-      break;
-
-    case hashFilters.classroom:
-      links.forEach((link) => {
-        if (link.matches(":not(.classroom)")) {
-          link.style.display = "none";
-        }
-      });
-
-      cards.forEach((card) => {
-        if (card.matches(":not(.classroom)")) {
           card.style.display = "none";
         }
       });
