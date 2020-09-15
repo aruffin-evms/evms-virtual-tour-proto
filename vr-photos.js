@@ -537,7 +537,7 @@ function getButtonID(id) {
 function addVideoToModule(videoAsset) {
   placeholderImage.style.display = "none"
   mediaModule.style.backgroundColor = 'black'
-  mediaModule.style.height = '506px'
+  mediaModule.style.height = 'auto'
   video.src = videoAsset
   video.style.display = "block"
   video.style.animation = "fadeIn 2s"
