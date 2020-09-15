@@ -530,7 +530,7 @@ function getButtonID(id) {
       break;
 
     case "hamptonRoadsCta":
-      addIframeToModule("https://www.youtube.com/embed/jNxHY9Kb2oo")
+      addIframeToModule("https://www.youtube.com/embed/jNxHY9Kb2oo", true)
       break;
 
     default:
@@ -549,7 +549,7 @@ function addVideoToModule(videoAsset) {
   video.play()
 }
 
-function addIframeToModule(source) {
+function addIframeToModule(source, regularVideo) {
   placeholderImage.style.display = "none"
   mediaModule.style.backgroundColor = 'black'
   mediaModule.style.height = 'auto'
@@ -558,7 +558,9 @@ function addIframeToModule(source) {
   iframe.style.width = "100%";
   iframe.style.height = "100%";
   iframe.style.display = 'block'
-  // iframe.src = source + '?autoplay=1'
+  if(regularVideo == true) {
+    iframe.src = source + '?autoplay=1'
+  }
 }
 
 
