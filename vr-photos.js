@@ -520,6 +520,7 @@ function getButtonID(id) {
   switch (id) {
     case "sharedCampusCta":
       iframe.style.display = 'none'
+      iframe.src = iframe.src + '?autoplay=0'
       addVideoToModule(videoAssets.sharedCampus, video)
       break;
 
@@ -530,6 +531,7 @@ function getButtonID(id) {
 
     case "hamptonRoadsCta":
       iframe.style.display = 'none'
+      iframe.src = iframe.src + '?autoplay=0'
       addVideoToModule(videoAssets.sharedCampus, video)
       break;
 
