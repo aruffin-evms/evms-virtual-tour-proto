@@ -519,9 +519,7 @@ function findButtonID() {
 function getButtonID(id) {
   switch (id) {
     case "sharedCampusCta":
-      iframe.style.display = 'none'
-      iframe.src = iframe.src + '?autoplay=0'
-      addVideoToModule(videoAssets.sharedCampus, video)
+      addIframeToModule("https://www.youtube.com/embed/9mUpHMKVfAE", true)
       break;
 
     case "simCenterCta":
@@ -530,7 +528,7 @@ function getButtonID(id) {
       break;
 
     case "hamptonRoadsCta":
-      addIframeToModule("https://www.youtube.com/embed/jNxHY9Kb2oo")
+      addIframeToModule("https://www.youtube.com/embed/jNxHY9Kb2oo", true)
       break;
 
     default:
@@ -538,18 +536,19 @@ function getButtonID(id) {
   }
 }
 
-function addVideoToModule(videoAsset) {
-  placeholderImage.style.display = "none"
-  mediaModule.style.backgroundColor = 'black'
+{/* <iframe width="560" height="315" src="https://www.youtube.com/embed/9mUpHMKVfAE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+// function addVideoToModule(videoAsset) {
+//   placeholderImage.style.display = "none"
+//   mediaModule.style.backgroundColor = 'black'
   
-  mediaModule.style.height = 'auto'
-  video.src = videoAsset
-  video.style.display = "block"
-  video.style.animation = "fadeIn 2s"
-  video.play()
-}
+//   mediaModule.style.height = 'auto'
+//   video.src = videoAsset
+//   video.style.display = "block"
+//   video.style.animation = "fadeIn 2s"
+//   video.play()
+// }
 
-function addIframeToModule(source) {
+function addIframeToModule(source, regularVideo) {
   placeholderImage.style.display = "none"
   mediaModule.style.backgroundColor = 'black'
   mediaModule.style.height = 'auto'
@@ -558,7 +557,9 @@ function addIframeToModule(source) {
   iframe.style.width = "100%";
   iframe.style.height = "100%";
   iframe.style.display = 'block'
-  // iframe.src = source + '?autoplay=1'
+  if(regularVideo == true) {
+    iframe.src = source + '?autoplay=1'
+  }
 }
 
 
