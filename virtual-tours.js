@@ -21,7 +21,7 @@ const removeHash = history.replaceState(
 const vrContent = {
   anatomyLab: {
     trigger: document.getElementById("anatomyLabVr"),
-    view: "./vr-views/anatomy-lab.html"
+    view: "https:vr-views/anatomy-lab.html"
   },
   castClassroom: {
     trigger: document.getElementById("castClassroomVr"),
