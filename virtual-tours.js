@@ -128,29 +128,29 @@ document.getElementById('lester107').addEventListener('click', function() {
 
 // video tours
 const videoAssets = {
-  anatomyLab: "./assets/videos/anatomy-lab-virtual-tour-clips.mp4",
+  anatomyLab: "https://www.evms.edu/uploads/videos/anatomy-lab-virtual-tour-clips.mp4",
   brickellLibrary:
-    "./assets/videos/brickell-medical-science-library-virtual-tour-clips.mp4",
+    "https://www.evms.edu/uploads/videos/brickell-medical-science-library-virtual-tour-clips.mp4",
   communityCenter:
-    "./assets/videos/hampton-roads-community-foundation-student-center-virtual-tour-clips.mp4",
-  multiDisclab: "./assets/videos/multidisciplinary-labs-virtual-tour-clips.mp4",
-  sharedCampus: "./assets/videos/shared-campus-virtual-tour-clips.mp4",
-  studentParking: "./assets/videos/student-parking-virtual-tour-clips.mp4",
+    "https://www.evms.edu/uploads/videos/hampton-roads-community-foundation-student-center-virtual-tour-clips.mp4",
+  multiDisclab: "https://www.evms.edu/uploads/videos/multidisciplinary-labs-virtual-tour-clips.mp4",
+  sharedCampus: "https://www.evms.edu/uploads/videos/shared-campus-virtual-tour-clips.mp4",
+  studentParking: "https://www.evms.edu/uploads/videos/student-parking-virtual-tour-clips.mp4",
   towneBankLawn:
-    "./assets/videos/towne-bank-lawn-and-green-spaces-virtual-tour-clips.mp4",
-    artTherapyOffices: "./assets/videos/art-therapy-offices-300-305.mp4",
-    artTherapy2122: "./assets/videos/art-therapy-lewis-2122.mp4",
-    artTherapy107: "./assets/videos/art-therapy-room-107.mp4",
-    artTherapy411: "./assets/videos/art-therapy-room-411.mp4",
-    mccombsAuditorium: "./assets/videos/mccombs-auditorium.mp4",
-    proteomics: "./assets/videos/biomedical-sciences-proteomics.mp4",
-    cytometry: "./assets/videos/biomedical-sciences-flow-cytometry.mp4",
-    cancerCenter: "./assets/videos/biomedical-sciences-cancer-center-labs.mp4",
-    hofheimerHall: "./assets/videos/hofheimer-hall.mp4",
-    jonesInstitute: "./assets/videos/jones-institute.mp4",
-    lesterHall: "./assets/videos/lester-hall.mp4",
-    lewisHall: "./assets/videos/lewis-hall.mp4",
-    waitzerHall: "./assets/videos/waitzer-hall.mp4"
+    "https://www.evms.edu/uploads/videos/towne-bank-lawn-and-green-spaces-virtual-tour-clips.mp4",
+    artTherapyOffices: "https://www.evms.edu/uploads/videos/art-therapy-offices-300-305.mp4",
+    artTherapy2122: "https://www.evms.edu/uploads/videos/art-therapy-lewis-2122.mp4",
+    artTherapy107: "https://www.evms.edu/uploads/videos/art-therapy-room-107.mp4",
+    artTherapy411: "https://www.evms.edu/uploads/videos/art-therapy-room-411.mp4",
+    mccombsAuditorium: "https://www.evms.edu/uploads/videos/mccombs-auditorium.mp4",
+    proteomics: "https://www.evms.edu/uploads/videos/biomedical-sciences-proteomics.mp4",
+    cytometry: "https://www.evms.edu/uploads/videos/biomedical-sciences-flow-cytometry.mp4",
+    cancerCenter: "https://www.evms.edu/uploads/videos/biomedical-sciences-cancer-center-labs.mp4",
+    hofheimerHall: "https://www.evms.edu/uploads/videos/hofheimer-hall.mp4",
+    jonesInstitute: "https://www.evms.edu/uploads/videos/jones-institute.mp4",
+    lesterHall: "https://www.evms.edu/uploads/videos/lester-hall.mp4",
+    lewisHall: "https://www.evms.edu/uploads/videos/lewis-hall.mp4",
+    waitzerHall: "https://www.evms.edu/uploads/videos/waitzer-hall.mp4"
 };
 
 const hashFilters = {
