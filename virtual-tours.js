@@ -385,8 +385,6 @@ function handleHashChange() {
   showAllTours.style.display = "flex";
   showAllTours.style.background = '#943001'
   showAllTours.style.opacity = '1'
-  const hash = window.location.href.hash;
-  console.log(hash)
 
   const url = location.hash;
   
