@@ -379,6 +379,22 @@ function enableScroll() {
   html.style.overflow = null;
 }
 
+const splitUrl = location.hash.split('#')
+
+let parsedUrl = splitUrl.filter(function(item) {
+  return item;
+})
+
+// console.log(parsedUrl)
+applyHashFilters(parsedUrl)
+function applyHashFilters(array) {
+  console.log(array)
+   array.forEach(function(item) {
+    console.log(`:not(${item})`)
+    // 
+  })
+}
+
 handleHashChange()
 
 function handleHashChange() {
@@ -391,7 +407,7 @@ function handleHashChange() {
   switch (url) {
     case hashFilters.surgicalAssisting:
       links.forEach((link) => {
-        if (link.matches(":not(.surgical-assist)")) {
+        if (link.matches(applyHashFilters())) {
           link.style.display = "none";
         }
       });
