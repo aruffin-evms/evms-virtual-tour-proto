@@ -402,7 +402,7 @@ function handleHashChange() {
   showAllTours.style.background = '#943001'
   showAllTours.style.opacity = '1'
 
-  const url = location.hash;
+  const url = locataion.hash;
   
   switch (url) {
     case hashFilters.surgicalAssisting:
