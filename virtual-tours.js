@@ -387,27 +387,22 @@ let parsedUrl = splitUrl.filter(function(item) {
 
 // console.log(parsedUrl)
 applyHashFilters(parsedUrl)
+
 function applyHashFilters(array) {
-  console.log(array)
+  console.log('function called')
    array.forEach(function(item) {
-    console.log(`:not(${item})`)
-    // 
+     console.log('array' + item)
+    handleMultiHash(`:not(${item})`)
   })
 }
 
-handleHashChange()
-
-function handleHashChange() {
-  showAllTours.style.display = "flex";
-  showAllTours.style.background = '#943001'
-  showAllTours.style.opacity = '1'
-
-  const url = locataion.hash;
-  
-  switch (url) {
-    case hashFilters.surgicalAssisting:
+handleMultiHash()
+function handleMultiHash(filter) {
+  console.log(filter)
+  switch (filter) {
+    case filter = ":not(.surgical-assist)":
       links.forEach((link) => {
-        if (link.matches(applyHashFilters())) {
+        if (link.matches(":not(.surgical-assist)")) {
           link.style.display = "none";
         }
       });
@@ -420,7 +415,7 @@ function handleHashChange() {
 
       break;
 
-    case hashFilters.physicianAssistant:
+    case ":not(.phys-assistant)":
       links.forEach((link) => {
         if (link.matches(":not(.phys-assistant)")) {
           link.style.display = "none";
@@ -435,7 +430,7 @@ function handleHashChange() {
 
       break;
 
-    case hashFilters.pathAssistant:
+    case ":not(.path-assistant)":
       links.forEach((link) => {
         if (link.matches(":not(.path-assistant)")) {
           link.style.display = "none";
@@ -450,7 +445,8 @@ function handleHashChange() {
 
       break;
 
-    case hashFilters.biomedicalSciences:
+    case ":not(.biomed)":
+      console.log('case called')
       links.forEach((link) => {
         if (link.matches(":not(.biomed)")) {
           link.style.display = "none";
@@ -465,7 +461,7 @@ function handleHashChange() {
 
       break;
 
-    case hashFilters.artTherapy:
+    case ":not(.art-therapy)":
       links.forEach((link) => {
         if (link.matches(":not(.art-therapy)")) {
           link.style.display = "none";
@@ -480,7 +476,7 @@ function handleHashChange() {
 
       break;
 
-      case hashFilters.general:
+      case ":not(.general)":
       links.forEach((link) => {
         if (link.matches(":not(.general)")) {
           link.style.display = "none";
@@ -497,7 +493,8 @@ function handleHashChange() {
   }
 }
 
-window.onhashchange = handleHashChange;
+
+// window.onhashchange = handleHashChange;
 
 showAllTours.addEventListener("click", function () {
   history.replaceState({}, document.title, window.location.href.split("#")[0]);
@@ -563,6 +560,3 @@ function addIframeToModule(source, regularVideo) {
     iframe.src = source + '?autoplay=1'
   }
 }
-
-
-
