@@ -12,11 +12,6 @@ const links = document.querySelectorAll(".virtual-tours__link");
 const cards = document.querySelectorAll(".virtual-tours__video");
 
 const showAllTours = document.getElementById("showAllTours");
-const removeHash = history.replaceState(
-  {},
-  document.title,
-  window.location.href.split("#")[0]
-);
 
 const vrContent = {
   anatomyLab: {
@@ -390,6 +385,8 @@ function handleHashChange() {
   showAllTours.style.opacity = '1'
 
   const url = location.hash;
+
+  console.log('url'+ url)
 
   switch (url) {
     case hashFilters.surgicalAssisting:
