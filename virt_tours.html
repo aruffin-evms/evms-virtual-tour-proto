@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- scripts for page-->
+
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script defer src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+<script defer src="virt_tours.js"></script>
+<script defer src="virtual-tours.js"></script>
+
+<!-- end scripts for page-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="virtual-tours.css">
+
+        <style>
+            .item {float: left;}
+            .item img{
+                object-fit: cover;
+    border-radius: 5px;
+            }
+
+
+
+.item p {
+  margin: 0;
+}
+
+.red { background: #F33; }
+.blue { background: #88F; }
+.green { background: #3A3; }
+.orange { background: orange;}
+
+select, label, input { font-size: 20px; }
+
+label { margin-right: 10px; }
+
+        </style>
+    </head>
+    <body>
+        <div id="form-ui">
+            <p>
+              <label><input type="checkbox" value=".Anatomy" />Anatomy Lab (Lewis 2073)</label>
+              <label><input type="checkbox" value=".Art" />Art Therapy Studio</label>
+              <label><input type="checkbox" value=".Biomedical" />Biomedical Sciences Cancer Center - Video</label>
+              <label><input type="checkbox" value=".Proteomics" />Biomedical Sciences Proteomics - Video</label>
+              <label><input type="checkbox" value=".Brickell" />Brickell Medical Sciences Library - Video</label>
+            </p>
+            
+              
+             <!--<p id="output">--</p>-->
+              
+            </div>
+            
+            <div id="container">
+            <div class="virtual-tours__content__cards">
+              <!-- items added with JS -->
+            </div>
+            </div>
+        
+       
+    </body>
+</html>
