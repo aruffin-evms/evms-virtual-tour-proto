@@ -550,3 +550,40 @@ body {
   width: 100%;
   animation: fadeIn .6s;
 }
+
+
+/* filter page layout styles*/
+
+.grid-sizer,
+.item {
+  width: 25%;
+}
+
+.item {
+  float: left;
+  border-color: hsla(0, 0%, 0%, 0.7);
+  /* transition just the transitioning properties */
+  transition: background 0.5s , box-shadow 0.4s ;
+  transition-property: opacity !important;
+}
+
+.item img {
+  display: block;
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.container,.container2 {
+    width: 1000px;
+    margin:2% auto
+}
+
+/* clear fix */
+.item :after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.container2 label{
+line-height: 2em;
+}
