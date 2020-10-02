@@ -145,6 +145,14 @@
               <p class="virtual-tours__content__card__title">Brickell Medical Sciences Library Study Space - 360 photo</p>
             </div>
           </a>
+          <!-- video: CAST -->
+          <div id="castCard" class="virtual-tours__content__card virtual-tours__video surgical-assist general">
+            <figure class="virtual-tours__content__card__thumbnail">
+              <img id="castThumbnail" src="./assets/thumbnails/lewis-hall.jpg" alt="Lewis Hall" class="virtual-tours__content__card__thumbnail__image">
+              <span class="virtual-tours__icon material-icons">play_circle_outline</span>
+            </figure>
+            <p class="virtual-tours__content__card__title">CAST (Laparoscopic Surgery Training) - Video</p>
+          </div>
           <!-- vr: cast classroom -->
           <a id="castClassroomVr" class="virtual-tours__link general surgical-assist" target="_blank">
             <div class="virtual-tours__content__card">
@@ -475,6 +483,7 @@
     <div id="closeModal" class="virtual-tours__modal__close">&times;</div>
     <div class="virtual-tours__modal__content">
       <div class="virtual-tours__modal__video-wrapper">
+        <iframe id="modalIframe"></iframe>
         <video id="modalVideo" class="virtual-tours__modal__video" controls></video>
       </div>
     </div>
