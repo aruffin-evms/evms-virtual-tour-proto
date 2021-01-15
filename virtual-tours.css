@@ -61,6 +61,19 @@ body {
   min-height: 180px;
 }
 
+#modalIframe {
+  position: absolute;
+  height: 28%; 
+  width: 80%;
+}
+
+@media(min-width: 900px) {
+  #modalIframe {
+    height: 63%; 
+    width: 66%; 
+  }
+}
+
 .vr-scene {
   max-width: 400px !important;
   max-height: 400px !important;

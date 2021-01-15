@@ -13,6 +13,8 @@ const cards = document.querySelectorAll(".virtual-tours__video");
 
 const showAllTours = document.getElementById("showAllTours");
 
+const modalIframe = document.getElementById('modalIframe')
+
 const vrContent = {
   anatomyLab: {
     trigger: document.getElementById("anatomyLabVr"),
@@ -117,9 +119,9 @@ const vrContent = {
 }
 
 // debug 107
-document.getElementById('lester107').addEventListener('click', function() {
-  console.log('clicked')
-})
+// document.getElementById('lester107').addEventListener('click', function() {
+//   console.log('clicked')
+// })
 
 // video tours
 const videoAssets = {
@@ -145,7 +147,8 @@ const videoAssets = {
     jonesInstitute: "https://www.evms.edu/uploads/videos/jones-institute.mp4",
     lesterHall: "https://www.evms.edu/uploads/videos/lester-hall.mp4",
     lewisHall: "https://www.evms.edu/uploads/videos/lewis-hall.mp4",
-    waitzerHall: "https://www.evms.edu/uploads/videos/waitzer-hall.mp4"
+    waitzerHall: "https://www.evms.edu/uploads/videos/waitzer-hall.mp4",
+    cast: "https://www.youtube.com/embed/sVl0hRhPg5A"
 };
 
 const hashFilters = {
@@ -169,23 +172,8 @@ attachLink(vrContent.castLab.view, vrContent.castLab.trigger);
 // lester room vr
 attachLink(vrContent.lesterRoom.view, vrContent.lesterRoom.trigger);
 
-// lester hall lobby vr
-attachLink(vrContent.lesterHall.view, vrContent.lesterHall.trigger);
-
-// mdl vr
-attachLink(vrContent.mdLab.view, vrContent.mdLab.trigger);
-
 // pa admin offices vr
 attachLink(vrContent.paAdminOffices.view, vrContent.paAdminOffices.trigger);
-
-// student center bookstore
-attachLink(vrContent.studentCenterBookStore.view, vrContent.studentCenterBookStore.trigger);
-
-// student parking
-attachLink(vrContent.studentParking.view, vrContent.studentParking.trigger);
-
-// student parking garage
-attachLink(vrContent.studentParkingGarage.view, vrContent.studentParkingGarage.trigger);
 
 // chkd exterior
 attachLink(vrContent.chkdExterior.view, vrContent.chkdExterior.trigger)
@@ -196,29 +184,11 @@ attachLink(vrContent.evmsCourtyard.view, vrContent.evmsCourtyard.trigger)
 // lester 355 
 attachLink(vrContent.lester355.view, vrContent.lester355.trigger)
 
-// lester 411 
-attachLink(vrContent.lester411.view, vrContent.lester411.trigger)
-
-// lewis 2122 
-attachLink(vrContent.lewis2122.view, vrContent.lewis2122.trigger)
-
-// lewis 3030 
-attachLink(vrContent.lewis3030.view, vrContent.lewis3030.trigger)
-
 // lewis 3073
 attachLink(vrContent.lewis3073.view, vrContent.lewis3073.trigger)
 
 // lewis 3078
 attachLink(vrContent.lewis3078.view, vrContent.lewis3078.trigger)
-
-// library comp lab
-attachLink(vrContent.libraryCompLab.view, vrContent.libraryCompLab.trigger)
-
-// library first floor
-attachLink(vrContent.library.view, vrContent.library.trigger)
-
-// library study room
-attachLink(vrContent.libraryCompLab.view, vrContent.libraryStudyRoom.trigger)
 
 // roper auditorium
 attachLink(vrContent.roperAuditorium.view, vrContent.roperAuditorium.trigger)
@@ -228,9 +198,6 @@ attachLink(vrContent.sentaraExterior.view, vrContent.sentaraExterior.trigger)
 
 // towne bank lawn
 attachLink(vrContent.towneBank.view, vrContent.towneBank.trigger)
-
-// lester 107
-attachLink(vrContent.lester107.view, vrContent.lester107.trigger)
 
 // function to set the url to view the vr photos
 function attachLink(url, element) {
@@ -253,11 +220,20 @@ function findVideoID() {
 findVideoID();
 
 // show modal
-function showModal(source) {
+function showModal(source, iframe) {
   virtualTourModal.style.display = "block";
   disableScroll();
   modalVideo.src = source;
   modalVideo.play();
+
+  if(iframe == true) {
+    modalVideo.style.display = 'none'
+    modalIframe.style.display = 'block'
+    modalIframe.src = source
+  } else {
+    modalIframe.style.display = 'none'
+    modalVideo.style.display = 'block'
+  }
 }
 
 // switch statement to add video to modals
@@ -363,11 +339,17 @@ function injectVideoSource(id) {
     case "waitzerHallThumbnail":
       showModal(videoAssets.waitzerHall)
       break;
+
+    case "castCard": 
+    case "castThumbnail": 
+      showModal(videoAssets.cast, true)
+      break;
   }
 }
 
 closeModal.addEventListener("click", function () {
   virtualTourModal.style.display = "none";
+  modalIframe.src = iframe.src + '?autoplay=0';
   enableScroll();
 });
 
@@ -379,28 +361,19 @@ function enableScroll() {
   html.style.overflow = null;
 }
 
-const splitUrl = location.hash.split('#')
+handleHashChange()
 
-let parsedUrl = splitUrl.filter(function(item) {
-  return item;
-})
+function handleHashChange() {
+  showAllTours.style.display = "flex";
+  showAllTours.style.background = '#943001'
+  showAllTours.style.opacity = '1'
+  const hash = window.location.href.hash;
+  console.log(hash)
 
-// console.log(parsedUrl)
-applyHashFilters(parsedUrl)
-
-function applyHashFilters(array) {
-  console.log('function called')
-   array.forEach(function(item) {
-     console.log('array' + item)
-    handleMultiHash(`:not(${item})`)
-  })
-}
-
-handleMultiHash()
-function handleMultiHash(filter) {
-  console.log(filter)
-  switch (filter) {
-    case filter = ":not(.surgical-assist)":
+  const url = location.hash;
+  
+  switch (url) {
+    case hashFilters.surgicalAssisting:
       links.forEach((link) => {
         if (link.matches(":not(.surgical-assist)")) {
           link.style.display = "none";
@@ -415,7 +388,7 @@ function handleMultiHash(filter) {
 
       break;
 
-    case ":not(.phys-assistant)":
+    case hashFilters.physicianAssistant:
       links.forEach((link) => {
         if (link.matches(":not(.phys-assistant)")) {
           link.style.display = "none";
@@ -430,7 +403,7 @@ function handleMultiHash(filter) {
 
       break;
 
-    case ":not(.path-assistant)":
+    case hashFilters.pathAssistant:
       links.forEach((link) => {
         if (link.matches(":not(.path-assistant)")) {
           link.style.display = "none";
@@ -445,8 +418,7 @@ function handleMultiHash(filter) {
 
       break;
 
-    case ":not(.biomed)":
-      console.log('case called')
+    case hashFilters.biomedicalSciences:
       links.forEach((link) => {
         if (link.matches(":not(.biomed)")) {
           link.style.display = "none";
@@ -461,7 +433,7 @@ function handleMultiHash(filter) {
 
       break;
 
-    case ":not(.art-therapy)":
+    case hashFilters.artTherapy:
       links.forEach((link) => {
         if (link.matches(":not(.art-therapy)")) {
           link.style.display = "none";
@@ -476,7 +448,7 @@ function handleMultiHash(filter) {
 
       break;
 
-      case ":not(.general)":
+      case hashFilters.general:
       links.forEach((link) => {
         if (link.matches(":not(.general)")) {
           link.style.display = "none";
@@ -493,8 +465,7 @@ function handleMultiHash(filter) {
   }
 }
 
-
-// window.onhashchange = handleHashChange;
+window.onhashchange = handleHashChange;
 
 showAllTours.addEventListener("click", function () {
   history.replaceState({}, document.title, window.location.href.split("#")[0]);
@@ -560,3 +531,9 @@ function addIframeToModule(source, regularVideo) {
     iframe.src = source + '?autoplay=1'
   }
 }
+
+
+
+// function killIframes() {
+//   let iframe = 
+// }
